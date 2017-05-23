@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding:utf-8
 # Exemple d'appel :
-# python sudoku.py grille_avion1_p36 --AIDE
+# python sudoku.py grille_diabolique --AIDE
 ##############################################################################
 # 79 colonnes max-------------------------------------------------------------
 ##############################################################################
