@@ -11,3 +11,5 @@ x x 3 x 2 4 1 x x
 x x x 6 x x x 5 4
 
 Puis on appelle sudoku.py <FICHIER_GRILLE>
+
+Possibilité d'afficher une aide via l'option --AIDE

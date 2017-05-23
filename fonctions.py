@@ -235,9 +235,9 @@ def calcul_masques(grille, AIDE=False):
                 #print(num_ligne, num_colonne)
             # fin possibilite dans la colonne X
             if possibilites[:,X].sum() == 0 and not (chiffre in nouvelle_grille[:,X]):
-			    erreurs = True # car on n'a aucune possibilité dans la colonne mais le chiffre n'y est pas !
-			    break
-			# fin if
+                erreurs = True # car on n'a aucune possibilité dans la colonne mais le chiffre n'y est pas !
+                break
+            # fin if
             if possibilites[X,:].sum() == 1: # 1 seule possibilite dans la ligne X
                 ligne = list(possibilites[X,:])
                 num_ligne = X
@@ -255,9 +255,9 @@ def calcul_masques(grille, AIDE=False):
                 #print(num_ligne, num_colonne)
             # fin possibilite dans la ligne X
             if possibilites[X,:].sum() == 0 and not (chiffre in nouvelle_grille[X,:]):
-			    erreurs = True # car on n'a aucune possibilité dans la ligne mais le chiffre n'y est pas !
-			    break
-			# fin if
+                erreurs = True # car on n'a aucune possibilité dans la ligne mais le chiffre n'y est pas !
+                break
+            # fin if
         # fin X
         
         for I in range(3): # ligne de carres
@@ -283,9 +283,9 @@ def calcul_masques(grille, AIDE=False):
                     #print(num_ligne, num_colonne)
                 # fin if
                 if carre.sum() == 0 and not (chiffre in nouvelle_grille[3*I:3*I+3, 3*J:3*J+3]):
-				    erreurs = True
-				    break
-				# fin if
+                    erreurs = True
+                    break
+                # fin if
             # fin for J
         # fin I (lignes de carres)
 
@@ -388,5 +388,5 @@ def resolution_recursive(grille, nombre, i_essai, j_essai, niveau=1, chemin=""):
         grille_remplie = copy.deepcopy(grille_essai)
         erreurs = False
     elif erreurs:
-		grille_remplie = copy.deepcopy(grille) # on revient à la grille initiale
+        grille_remplie = copy.deepcopy(grille) # on revient à la grille initiale
     return (grille_remplie, erreurs)    

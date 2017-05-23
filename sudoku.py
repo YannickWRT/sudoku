@@ -15,8 +15,8 @@ import itertools
 # Import des fonctions persos
 import fonctions
 
-__version__="0.1"
-__date__="26/03/2017"
+__version__="0.5"
+__date__="23/05/2017"
 __author__="Y. WRTAL"
 
 
@@ -82,14 +82,14 @@ if  __name__ == "__main__":
             # et on les classe par ordre de nb_possibilites
             for i_essai, j_essai in itertools.product(range(9), range(9)):
                 if possibilites[i_essai, j_essai] > 1:
-					cas_a_explorer.append((possibilites[i_essai, j_essai],
-					                       i_essai,
-					                       j_essai,
-					                       listes_possibilites[i_essai, j_essai]
-					                       ))
-			    # fin if
-			# fin définition cas_a_explorer
-			# Maintenant on doit le classer
+                    cas_a_explorer.append((possibilites[i_essai, j_essai],
+                                           i_essai,
+                                           j_essai,
+                                           listes_possibilites[i_essai, j_essai]
+                                           ))
+                # fin if
+            # fin définition cas_a_explorer
+            # Maintenant on doit le classer
             cas_a_explorer.sort()
             cas_a_explorer = [cas_a_explorer[::-1]][0]
             #print(cas_a_explorer)
@@ -104,10 +104,10 @@ if  __name__ == "__main__":
                         nouvelle_grille = copy.copy(grille_remplie)
                         restants = 0
                         break
-				# fin for nombre_possible
+                # fin for nombre_possible
                 if not erreurs:
                     break
-			# fin itérations sur cas à explorer
+            # fin itérations sur cas à explorer
 
             #exit()
         grille_connue = copy.copy(nouvelle_grille)
